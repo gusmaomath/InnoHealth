@@ -4,7 +4,9 @@
 
 Este código implementa um sistema IoT (Internet das Coisas) projetado para prevenção de epilepsia e monitoramento de convulsões. O sistema utiliza sensores para medir condições ambientais e movimento, e se comunica com um servidor central usando o protocolo MQTT (Message Queuing Telemetry Transport). Além disso, ele integra um sistema de IA chamado "Métis" para aprender e prever padrões de convulsões.
 
-![image](https://github.com/gusmaomath/InnoHealth/assets/104039223/e7a40cc8-2dcf-450a-bca3-75d9f98eb6a9)
+<p align="center">
+   ![image](https://github.com/gusmaomath/InnoHealth/assets/104039223/33de5c0c-25a7-4269-87eb-a277d5cd6975)
+</p>
 
 
 ## Componentes
