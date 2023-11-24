@@ -1,13 +1,12 @@
-# Sistema de Prevenção de Epilepsia com IoT e IA (InnoHealth)
+# InnoHealth: Sistema de Prevenção de Epilepsia com IoT e IA
 
 ## Visão Geral
 
-Este código implementa um sistema IoT (Internet das Coisas) com disponibilidade de teste no Wokwi, projetado para prevenção de epilepsia e monitoramento de convulsões. O sistema utiliza sensores para medir condições ambientais e movimento, e se comunica com um servidor central usando o protocolo MQTT (Message Queuing Telemetry Transport). Além disso, ele integra um sistema de IA chamado "Métis" para aprender e prever padrões de convulsões.
+O InnoHealth é um sistema integrado de Internet das Coisas (IoT) e Inteligência Artificial (IA) projetado para prevenir ataques epiléticos e monitorar convulsões. Utilizando sensores para medir condições ambientais e movimento, juntamente com um sistema de IA chamado "Métis", este sistema oferece uma abordagem abrangente para melhorar a qualidade de vida de pacientes com epilepsia.
 
-<p align="center">
-  <img src="https://github.com/gusmaomath/InnoHealth/assets/104039223/35a806fe-0c6a-474e-8d20-675be01c52ca" alt="Descrição da Imagem">
-  <p align="center">https://wokwi.com/projects/381384520318205953</p>
-</p>
+![InnoHealth System](https://github.com/gusmaomath/InnoHealth/assets/104039223/35a806fe-0c6a-474e-8d20-675be01c52ca)
+
+**Projeto em execução:** [InnoHealth Wokwi](https://wokwi.com/projects/381384520318205953)
 
 ## Componentes
 
@@ -27,53 +26,54 @@ Este código implementa um sistema IoT (Internet das Coisas) com disponibilidade
 ## Como Funciona
 
 1. **Leituras dos Sensores:**
-   - O sensor DHT22 mede temperatura corporal e umidade.
-   - O sensor MPU6050 mede dados de aceleração e giroscópio.
+   - DHT22 mede temperatura corporal e umidade.
+   - MPU6050 mede dados de aceleração e giroscópio.
 
 2. **Botão de Pânico:**
-   - Um botão de pânico é implementado usando uma entrada digital. Quando pressionado, aciona a sinalização de emergência publicando uma mensagem no tópico MQTT "panico".
+   - Ativado por uma entrada digital, aciona a sinalização de emergência no tópico MQTT "panico".
 
 3. **Monitoramento Ambiental:**
-   - Leituras de temperatura e umidade corporal são monitoradas. Se os valores excederem limites predefinidos, uma mensagem de alerta é publicada no tópico MQTT "alerta".
+   - Alertas publicados no tópico MQTT "alerta" se a temperatura ou umidade excederem limites predefinidos.
 
 4. **Monitoramento de Movimento:**
-   - Dados de aceleração e giroscópio são monitorados. Se os valores excederem limites predefinidos, indicando um movimento incomum, é detectada uma possível convulsão. O sistema toma medidas preventivas, como publicar uma mensagem no tópico MQTT "lidarComAtaqueEpiletico".
+   - Detecta possível convulsão se os valores de aceleração ou giroscópio excederem limites predefinidos.
+   - Publica mensagem no tópico MQTT "lidarComAtaqueEpiletico" para tomar medidas preventivas.
 
 5. **Comunicação MQTT:**
-   - O dispositivo se comunica com um servidor MQTT central, especificado por `mqtt_server` e `mqtt_port`.
-   - Ele se inscreve no tópico "panico" para sinais de emergência.
+   - Dispositivo se comunica com servidor MQTT central especificado por `mqtt_server` e `mqtt_port`.
+   - Inscreve-se no tópico "panico" para sinais de emergência.
 
 6. **Integração com IA (Métis):**
-   - O sistema de IA "Métis" deve ser integrado separadamente.
-   - Métis aprende com dados históricos e padrões específicos do usuário para prever e prevenir convulsões.
+   - Sistema de IA "Métis" deve ser integrado separadamente.
+   - Métis aprende com dados históricos para prever e prevenir convulsões.
 
 ## Configuração
 
 1. **Conectar Hardware:**
-   - Conecte o DHT22, MPU6050 e botão de pânico aos pinos apropriados no Arduino.
+   - Conecte DHT22, MPU6050 e botão de pânico aos pinos apropriados no Arduino.
 
 2. **Configuração WiFi:**
-   - Configure as credenciais do WiFi (SSID e senha) no código.
+   - Configure credenciais do WiFi (SSID e senha) no código.
 
 3. **Configuração MQTT:**
-   - Configure os detalhes do servidor MQTT (IP do servidor, porta) e o ID do cliente MQTT.
+   - Configure detalhes do servidor MQTT (IP e porta) e ID do cliente MQTT.
 
 4. **Limites e Thresholds:**
-   - Ajuste os limites e thresholds predefinidos para temperatura, umidade corporal, aceleração e valores do giroscópio de acordo com requisitos específicos.
+   - Ajuste limites para temperatura, umidade, aceleração e giroscópio de acordo com requisitos.
 
 5. **Integração com IA:**
-   - O sistema de IA Métis precisa ser integrado separadamente para aprendizado e previsão de padrões de convulsões personalizados.
+   - Sistema de IA Métis precisa ser integrado para aprendizado e previsão de padrões de convulsões.
 
 ## Uso
 
-- Faça o upload do código para a placa Arduino.
+- Faça upload do código para a placa Arduino.
 - Certifique-se de que o dispositivo IoT está conectado à rede WiFi.
-- Monitore os tópicos MQTT para sinais de emergência, alertas e medidas preventivas contra convulsões.
-- Integre o sistema de IA Métis para previsão personalizada de convulsões.
+- Monitore tópicos MQTT para sinais de emergência, alertas e medidas preventivas.
+- Integre Métis para previsão personalizada de convulsões.
 
 ## Nota Importante
 
-Este código serve como um framework fundamental para um sistema de prevenção de epilepsia. A eficácia da previsão de convulsões depende principalmente da precisão e capacidade de aprendizado do sistema de IA Métis. É essencial atualizar continuamente e aprimorar o Métis com base em dados do mundo real e feedback do usuário para melhorar suas capacidades preditivas.
+Este código é um framework para prevenção de epilepsia. A eficácia depende da precisão do sistema Métis e do ajuste contínuo com dados reais e feedback do usuário.
 
 ## Autor
 
@@ -81,5 +81,5 @@ Matheus Gusmão & Júlia Neves
 
 ## Agradecimentos
 
-- Este projeto foi inspirado pela necessidade de soluções eficazes de prevenção de epilepsia.
-- Agradecimentos especiais à comunidade de código aberto pelas bibliotecas utilizadas neste projeto.
+- Inspirado pela necessidade de soluções eficazes de prevenção de epilepsia.
+- Agradecimentos à comunidade de código aberto pelas bibliotecas utilizadas neste projeto.
