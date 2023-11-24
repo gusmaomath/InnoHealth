@@ -6,7 +6,7 @@ Este código implementa um sistema IoT (Internet das Coisas) com disponibilidade
 
 <p align="center">
   <img src="https://github.com/gusmaomath/InnoHealth/assets/104039223/35a806fe-0c6a-474e-8d20-675be01c52ca" alt="Descrição da Imagem">
-  <p>https://wokwi.com/projects/381384520318205953</p>
+  <p align="center">https://wokwi.com/projects/381384520318205953</p>
 </p>
 
 ## Componentes
