@@ -1,4 +1,4 @@
-# InnoHealth: Sistema de Prevenção de Epilepsia com IoT e IA
+# InnoHealth: Sistema de Prevenção de Epilepsia com IoT e IA Métis
 
 ## Visão Geral
 
