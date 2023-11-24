@@ -4,7 +4,9 @@
 
 O InnoHealth é um sistema integrado de Internet das Coisas (IoT) e Inteligência Artificial (IA) projetado para prevenir ataques epiléticos e monitorar convulsões. Utilizando sensores para medir condições ambientais e movimento, juntamente com um sistema de IA chamado "Métis", este sistema oferece uma abordagem abrangente para melhorar a qualidade de vida de pacientes com epilepsia.
 
-![InnoHealth System](https://github.com/gusmaomath/InnoHealth/assets/104039223/35a806fe-0c6a-474e-8d20-675be01c52ca)
+<p align="center">
+  <img src="https://github.com/gusmaomath/InnoHealth/assets/104039223/35a806fe-0c6a-474e-8d20-675be01c52ca">
+</p>
 
 **Projeto em execução:** [InnoHealth Wokwi](https://wokwi.com/projects/381384520318205953)
 
