@@ -8,7 +8,7 @@ O InnoHealth é um sistema integrado de Internet das Coisas (IoT) e Inteligênci
   <img src="https://github.com/gusmaomath/InnoHealth/assets/104039223/35a806fe-0c6a-474e-8d20-675be01c52ca">
 </p>
 
-**Projeto em execução:** [InnoHealth Wokwi](https://wokwi.com/projects/381384520318205953)
+**Projeto em execução:** [InnoHealth Wokwi](https://wokwi.com/projects/382256661018457089)
 
 ## Componentes
 
