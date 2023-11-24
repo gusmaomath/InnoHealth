@@ -48,6 +48,12 @@ O InnoHealth é um sistema integrado de Internet das Coisas (IoT) e Inteligênci
 6. **Integração com IA (Métis):**
    - Sistema de IA "Métis" deve ser integrado separadamente.
    - Métis aprende com dados históricos para prever e prevenir convulsões.
+   - Inicialize o sistema Métis com um conjunto de dados históricos que inclua leituras dos sensores durante convulsões e períodos normais.
+   - Carregue o modelo treinado do Métis no código Arduino ou em um servidor que processa os dados MQTT recebidos.
+   - Ao receber leituras de sensores em tempo real, pré-processe os dados conforme necessário e use o modelo Métis para prever a probabilidade de uma convulsão.
+   - Com base na probabilidade prevista, tome medidas adequadas, como enviar alertas, acionar medidas preventivas ou notificar profissionais de saúde
+   - A eficácia do Métis depende fortemente da qualidade dos dados de treinamento e da capacidade contínua de adaptação.
+   - Certifique-se de ajustar os parâmetros do modelo e a arquitetura da rede neural de acordo com as características dos seus dados.
 
 ## Configuração
 
