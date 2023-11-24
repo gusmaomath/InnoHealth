@@ -1,5 +1,3 @@
-Adafruit MPU6050
 PubSubClient
 DHT sensor library
-MPU6050
 MPU6050_tockn
